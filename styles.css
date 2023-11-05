@@ -1,11 +1,223 @@
 /* Add your CSS to this file */
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    display: flex;/*this makes its child elements arrange in a row*/
+    
 }
+
+header{
+    background: white;
+    font-size: 18px;
+}
+
+h1{
+    flex: 1;/* h1 will be in the same row as nav elements*/
+}
+
+
+
+ul{
+    list-style-type: none; /*removes the bullets*/
+    overflow: hidden;
+    
+}
+
+
+nav{
+    float: right; /*aligning the elements to the right.*/
+    flex: 1;/* nav elements will be in the same row as h1 */
+}
+
+li{
+    float: left; /*aligning the elements to start from left to right.*/
+    padding: 14px 16px;
+}
+
+li a{
+    display: block;
+    text-align: center;
+    color: #6b7280;
+}
+
+li a:hover{
+    color: #5a67d8;
+}
+
+.overview-hero{
+    background: #e2e870;
+}
+
+.overview-hero-image img{
+   height: 180px; 
+   width: 180px;
+   margin-top: 10px;
+}
+
+.overview-hero-text{
+   /* text-align: right;*/
+    float: left;
+    margin-left: 14px;
+}
+
+.learn-about .container{
+    display: flex;
+    flex-wrap: wrap; /* wrapping the contents so that the heading and the columns is not in the same line.*/
+}
+
+.learn-about .container h2{
+    font-size: 24px;
+    color:#48bb78;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: 100 100 100;
+    column-gap: 10px;
+    grid-auto-flow: column;
+    
+}
+
+
+
+.card{
+    text-align: center;
+    border-style: solid;
+    border-color: #e2e870;
+    border-radius: 5px;
+    box-shadow: 4px 4px 3px grey;
+    margin-bottom: 40px;
+
+}
+
+.card-body h3{
+    font-size: 21px;
+    color: #48bb78;
+}
+
+.card img{
+    height: 180px;
+    width: 180px;    
+}
+
+.cards:nth-child(1){
+    grid-column: 1;
+
+}
+.cards:nth-child(2){
+    grid-column: 2;
+}
+
+.cards:nth-child(3){
+    grid-column: 3;
+}
+
+.testing{
+    background: #4a5568;
+    color: white;
+}
+
+.testing-description{
+    display: flex;
+    text-wrap: wrap;
+    justify-content: left;
+   
+}
+
+.cta {
+    display: flex;
+   white-space: nowrap;
+   justify-content: center;
+   margin: auto;
+   padding-left: 30px;
+   padding-right: 30px;
+   padding-bottom: 20px;
+   padding-top: 20px;
+   background: #48bb78;
+   border-style: solid;
+   border-radius: 5px;
+   border-color: #48bb78;
+}
+
+
+.stories .container{ 
+    /*To prevent the image and text from being in the same line*/
+    display: flex;
+    flex-wrap: wrap;
+       
+}
+
+.stories .container h2{
+    white-space: nowrap;
+    grid-column: 1/span 2;
+}
+
+article{
+     /*aligning the image and text to be side-by-side using columns*/
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    grid-auto-flow: column;
+}
+ /*place the image and text of each article tag in two separate columns*/
+article:nth-child(1){
+    grid-column: 1;
+}
+
+article:nth-child(2){
+    grid-column: 2;
+}
+
+ /*resizing the images under the article tag*/
+article img{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px; 
+    
+}
+
+.newsletter .container{
+    display: block;
+}
+
+.newsletter .container h3{
+  text-align: center;
+  text-wrap: nowrap;
+ 
+  
+}
+
+.newsletter .container p{
+    text-align: center;   
+}
+
+form{
+    display: grid;
+    grid-template-columns: auto 50;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    
+}
+
+div .form-group{
+    grid-column: 1;
+    margin-left: 69%;
+ 
+}
+
+button .btn{
+    grid-column: 2;
+}
+
+
+
+
+
+
