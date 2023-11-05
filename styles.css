@@ -15,7 +15,8 @@ body {
 
 header{
     background: white;
-    font-size: 18px;
+    font-size: 16px;
+    
 }
 
 h1{
@@ -45,6 +46,8 @@ li a{
     display: block;
     text-align: center;
     color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 li a:hover{
@@ -53,18 +56,25 @@ li a:hover{
 
 .overview-hero{
     background: #e2e870;
+    height: 260px;
+    padding: 60px;
+   
 }
 
 .overview-hero-image img{
-   height: 180px; 
-   width: 180px;
-   margin-top: 10px;
-}
+   height: 250px; 
+   width: 250px;
+  }
 
 .overview-hero-text{
    /* text-align: right;*/
     float: left;
-    margin-left: 14px;
+    margin-left: 60px;
+}
+
+.overview-hero-text p{
+    width: 90%;
+
 }
 
 .learn-about .container{
@@ -80,20 +90,21 @@ li a:hover{
 .cards{
     display:grid;
     grid-template-columns: 100 100 100;
-    column-gap: 10px;
+    column-gap: 20px;
     grid-auto-flow: column;
     
 }
 
 
-
 .card{
-    text-align: center;
+    text-align: left;
     border-style: solid;
+    border-width: 1px;
     border-color: #e2e870;
     border-radius: 5px;
-    box-shadow: 4px 4px 3px grey;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
+    padding: 18px;
 
 }
 
@@ -103,8 +114,9 @@ li a:hover{
 }
 
 .card img{
-    height: 180px;
-    width: 180px;    
+    align-items: center;
+    height: 200px;
+    width: 250px;    
 }
 
 .cards:nth-child(1){
@@ -122,6 +134,13 @@ li a:hover{
 .testing{
     background: #4a5568;
     color: white;
+    height: 290px;
+    align-content: center;
+    padding-top: 70px;
+}
+
+.testing p{
+    width: 88%;
 }
 
 .testing-description{
@@ -135,28 +154,50 @@ li a:hover{
     display: flex;
    white-space: nowrap;
    justify-content: center;
-   margin: auto;
-   padding-left: 30px;
-   padding-right: 30px;
-   padding-bottom: 20px;
-   padding-top: 20px;
+   margin-top: 70px;
+   margin-right: 120px;
+   margin-bottom: auto;
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-bottom: 10px;
+   padding-top: 10px;
    background: #48bb78;
    border-style: solid;
    border-radius: 5px;
    border-color: #48bb78;
+   
 }
 
+.cta a{
+    text-decoration: none;
+    color: white;
 
+}
 .stories .container{ 
     /*To prevent the image and text from being in the same line*/
     display: flex;
     flex-wrap: wrap;
-       
+    padding: 50px;   
 }
 
 .stories .container h2{
     white-space: nowrap;
     grid-column: 1/span 2;
+    color: #5a67d8;
+}
+
+.stories .container h3{
+    font-size: 18px;
+}
+
+.stories .container .article-body  p{
+    width: 95%;
+}
+
+.stories .container .article-body  p a{
+    color: #5a67d8;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 article{
@@ -178,13 +219,21 @@ article:nth-child(2){
  /*resizing the images under the article tag*/
 article img{
     border-radius: 50%;
-    height: 120px;
-    width: 120px; 
+    height: 180px;
+    width: 180px; 
     
 }
 
+.newsletter{
+    background-color: #48BB78;
+    color: white;
+    padding: 30px;
+    height: 230px;
+}
 .newsletter .container{
     display: block;
+   
+   
 }
 
 .newsletter .container h3{
@@ -195,28 +244,54 @@ article img{
 }
 
 .newsletter .container p{
-    text-align: center;   
+    text-align: left;
+    width: 50%; 
+    margin-left: 170px;
 }
 
 form{
     display: grid;
     grid-template-columns: auto 50;
     grid-auto-flow: column;
-    column-gap: 10px;
+    column-gap: 5px;
     
+}
+
+input{
+    width: 70%;
+    padding: 17px 20px;
+    margin-left: 170px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 div .form-group{
     grid-column: 1;
-    margin-left: 69%;
+  
  
 }
 
 button .btn{
     grid-column: 2;
+   
+}
+button{
+    background-color: #5a67d8;
+    width: 50%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-right: 50px;
 }
 
-
+footer{
+    background-color: #4a5568;
+    color: white;
+    padding: 10px;
+}
 
 
 
